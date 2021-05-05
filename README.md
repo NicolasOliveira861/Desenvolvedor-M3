@@ -1,64 +1,46 @@
-# Venha ser um desenvolvedor da Digital M3
+# Getting Started with Create React App
 
-Ola, somos a Agência Digital M3, uma agência voltada para ramo de comercio eletrônico, trabalhamos com implantação, migração, evolução e otmização de e-commerces. Estamos com a sede de desenvolvimento em Nova Friburgo RJ e um escritório comercial na cidade de São Paulo.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Em Nova Friburgo estamos na: 
-> R. Helena Coutinho, 41 
-> Braunes, Nova Friburgo/RJ
-[https://goo.gl/maps/2mWagcctnrGdtFhBA]( https://goo.gl/maps/2mWagcctnrGdtFhBA )
+## Available Scripts
 
-Estamos procurando Desenvolvedores(as) `Front-end`, com sólidos conhecimentos em HTML, CSS e JS para projetar interfaces e entregar a melhor experiência para os consumidores visando sempre a otimização do código e agilidade no desenvolvimento.
+In the project directory, you can run:
 
-## O que procuramos
+### `yarn start`
 
-### Requisitos Obrigatórios
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-- Html5, css3;
-- Javascript, jquery;
-- Versionamento Git;
-- Grunt/gulp;
-- Sass/less;
-- Sites responsivos;
-- Iniciativa, criatividade e colaboração;
-- Boas práticas: reutilização de código, semântica, organização, performance.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-### Desejáveis:
+### `yarn test`
 
-- Experiência com algum CMS
-- Conhecimento/Experiência em Vtex
-- React
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-----
+### `yarn build`
 
-## Como se candidatar a vaga
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- [Crie um fork desse projeto;](https://github.com/agenciam3/Desenvolvedor-M3/fork)
-- No seu fork, codifique o layout seguindo as instruções abaixo;
-- Atualize o readme com as instruções necessárias para rodar o seu código;
-- Adicione também seu e-mail de contato ao readme do projeto ( caso seu e-mail do github esteja privado )
-- Faça um pull request (ou envie para [heraldo@digitalm3.com.br](mailto:heraldo@digitalm3.com.br?subject=Vaga%20DEV%20-%20Digital%20M3)
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-**obs.**: link do projeto [github.com/agenciam3/Desenvolvedor-M3](https://github.com/agenciam3/Desenvolvedor-M3)
+### `yarn eject`
 
-### Instruções para o teste
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-O layout se encontra na pasta "layout" em PSD e PNG.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### Obrigatório
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-- HTML5 e CSS3
-- Interação com JSON para renderizar os produtos (fique livre para criar o JSON no formato que achar mais adequado)
-- Interação com JSON para filtar os produtos
-- Funcionalidade: Filtrar produtos por cor, tamanho e preço.
-- Funcionalidade: Adicionar produto ao carrinho.
-- Funcionalidade: Carregar mais produtos.
-- Não utilizar Bootstrap, Foundation Css, Semantic ui ou semelhantes ;
-- Responsividade
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-#### Bônus
+## Learn More
 
-- Javascript sem plugins e modular
-- Grunt, Gulp ou similar
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-##### Dúvidas: [heraldo@digitalm3.com.br](mailto:heraldo@digitalm3.com.br?subject=Dúvida%20Vaga%20DEV%20-%20Digital%20M3)
+To learn React, check out the [React documentation](https://reactjs.org/).
