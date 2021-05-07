@@ -1,33 +1,56 @@
 import React from "react";
-import Colors from "../../services/colors.json";
+import { colors, sizes, priceLimit } from "../../services/data.js";
+import Checkbox from "../Checkbox";
+import SizeCheckbox from "../SizeCheckbox";
+import PricesCheckbox from "../PricesCheckbox";
 import {
   Container,
-  ColorContainer,
-  ColorTitle,
-  ItemContainer,
-  ColorItem,
-  ColorLabel,
+  FiltersContainer,
+  Title,
   SizeContainer,
-  SizeTitle,
-  SizeItem,
   PriceContainer,
-  PriceTitle,
   PriceItem,
+  ItemsContainer,
 } from "./styles";
 
 export default function Filters() {
   return (
     <Container>
-      <ColorContainer>
-        <ColorTitle> CORES </ColorTitle>
+      <FiltersContainer>
+        <Title> CORES </Title>
 
-        {Colors.colors.map((color) => (
-          <ItemContainer key={color.id}>
-            <ColorItem type="checkbox" name={color.id} value={color.id} />
-            <ColorLabel htmlFor={color.id}> {color.name} </ColorLabel>
-          </ItemContainer>
+        {colors.map((color) => (
+          <Checkbox
+            key={color.id}
+            label={color.id}
+            name={color.name}
+            value={color.id}
+          />
         ))}
-      </ColorContainer>
+        <SizeContainer>
+          <Title> TAMANHOS </Title>
+          <ItemsContainer>
+            {sizes.map((size) => (
+              <SizeCheckbox
+                key={size.id}
+                label={size.name}
+                name={size.name}
+                value={size.name}
+              />
+            ))}
+          </ItemsContainer>
+        </SizeContainer>
+        <PriceContainer>
+          <Title> FAIXA DE PREÇO </Title>
+          {priceLimit.map((price) => (
+            <PricesCheckbox
+              key={price.id}
+              price1={price.price1}
+              price2={price.price2}
+            />
+          ))}
+        </PriceContainer>
+      </FiltersContainer>
     </Container>
   );
 }

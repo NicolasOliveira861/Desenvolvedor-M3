@@ -6,6 +6,7 @@ export const Container = styled.div`
 
 export const CatalogContainer = styled.div`
   width: 100%;
+  padding: 0 4em;
   display: flex;
   justify-content: center;
 `;
