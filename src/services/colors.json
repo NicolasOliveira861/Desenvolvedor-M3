@@ -1,0 +1,53 @@
+{
+  "colors": [
+    {
+      "id": "yellow",
+      "name": "Amarelo"
+    },
+
+    {
+      "id": "blue",
+      "name": "Azul"
+    },
+
+    {
+      "id": "white",
+      "name": "Branco"
+    },
+
+    {
+      "id": "gray",
+      "name": "Cinza"
+    },
+
+    {
+      "id": "orange",
+      "name": "Laranja"
+    },
+
+    {
+      "id": "green",
+      "name": "Verde"
+    },
+
+    {
+      "id": "red",
+      "name": "Vermelho"
+    },
+
+    {
+      "id": "black",
+      "name": "Preto"
+    },
+
+    {
+      "id": "pink",
+      "name": "Rosa"
+    },
+
+    {
+      "id": "burgundy",
+      "name": "Vinho"
+    }
+  ]
+}
