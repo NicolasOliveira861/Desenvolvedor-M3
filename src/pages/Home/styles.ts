@@ -59,7 +59,7 @@ export const CatalogItem = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 33%;
+  flex-basis: 33%;
   padding: 0 1.4em;
 `;
 
@@ -89,4 +89,5 @@ export const BuyButton = styled.button`
   font-weight: bold;
   text-transform: uppercase;
   margin-top: 1em;
+  cursor: pointer;
 `;

@@ -35,8 +35,8 @@ export const StyledCheckbox = styled.div<CheckboxProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 16px;
-  height: 16px;
+  width: 1em;
+  height: 1em;
   border-radius: 0;
   border: 1px solid var(--black);
   cursor: pointer;
@@ -58,21 +58,21 @@ export const StyledCheckbox = styled.div<CheckboxProps>`
   .color {
     background: var(--blue);
     display: none;
-    width: 10px;
-    height: 10px;
+    width: 75%;
+    height: 70%;
   }
 
   ${(props) =>
     props.isChecked &&
     css`
       .color {
-        display: inline-block;
+        display: flex;
       }
 
       :hover {
         .color {
           background: var(--blue);
-          display: inline-block;
+          display: flex;
         }
       }
     `}

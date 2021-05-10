@@ -29,10 +29,12 @@ function PricesCheckbox({ label, price1, price2 }: any) {
         </StyledCheckbox>
       </CheckboxContainer>
 
-      {"de " +
-        PriceFormatter(price1).replace(/\s+/g, "").trim() +
-        " até " +
-        PriceFormatter(price2).replace(/\s+/g, "").trim()}
+      {price1 !== ""
+        ? "de " +
+          PriceFormatter(price1).replace(/\s+/g, "").trim() +
+          " até " +
+          PriceFormatter(price2).replace(/\s+/g, "").trim()
+        : "a partir de " + PriceFormatter(price2).replace(/\s+/g, "").trim()}
     </CheckboxLabel>
   );
 }

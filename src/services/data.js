@@ -226,7 +226,7 @@ export const priceLimit = [
 
   {
     id: 5,
-    price1: "undefined",
+    price1: "",
     price2: 501,
   },
 ];

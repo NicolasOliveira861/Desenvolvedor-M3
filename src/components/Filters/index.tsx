@@ -13,7 +13,11 @@ import {
   ItemsContainer,
 } from "./styles";
 
-export default function Filters() {
+interface CheckProps {
+  filtering?: string;
+}
+
+const Filters: React.FC<CheckProps> = ({ filtering }: CheckProps) => {
   return (
     <Container>
       <FiltersContainer>
@@ -53,4 +57,6 @@ export default function Filters() {
       </FiltersContainer>
     </Container>
   );
-}
+};
+
+export default Filters;
