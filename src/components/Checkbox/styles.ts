@@ -9,6 +9,10 @@ export const CheckboxLabel = styled.label`
   flex-direction: row;
   align-items: center;
   margin-bottom: 0.4em;
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 1.1em;
+  }
 `;
 
 export const CheckboxContainer = styled.div`
@@ -38,7 +42,7 @@ export const StyledCheckbox = styled.div<CheckboxProps>`
   width: 1em;
   height: 1em;
   border-radius: 0;
-  border: 1px solid var(--black);
+  border: 1px solid var(--darker-grey);
   cursor: pointer;
   margin-right: 8px;
 
@@ -76,4 +80,8 @@ export const StyledCheckbox = styled.div<CheckboxProps>`
         }
       }
     `}
+
+  @media screen and (max-width: 480px) {
+    margin-right: 16px;
+  }
 `;

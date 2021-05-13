@@ -8,7 +8,6 @@ import {
 
 function Checkbox({ label, name, value }: any) {
   const [checked, setChecked] = useState(false);
-  const [addFilter, setAddFilter] = useState(value);
 
   return (
     <CheckboxLabel htmlFor={label}>
@@ -22,7 +21,6 @@ function Checkbox({ label, name, value }: any) {
         <StyledCheckbox
           isChecked={checked}
           onClick={() => {
-            setAddFilter(!value);
             setChecked(!checked);
           }}
         >

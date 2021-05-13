@@ -8,9 +8,9 @@ export default createGlobalStyle`
     font-family: 'Open Sans', serif;
 
     --blue: #00c0ee;
-    --darker-grey: #7a7a7a;
+    --darker-grey: #6F6F6F;
     --grey: #c7c7c7;
-    --black: #222222;
+    --black: #000;
     --light-black: #333333;
     --white: #ffffff;
   }

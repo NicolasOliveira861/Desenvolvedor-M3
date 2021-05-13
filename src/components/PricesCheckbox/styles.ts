@@ -9,6 +9,10 @@ export const CheckboxLabel = styled.label`
   flex-direction: row;
   align-items: center;
   margin-bottom: 0.4em;
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 1.5em;
+  }
 `;
 
 export const CheckboxContainer = styled.div`
