@@ -72,7 +72,7 @@ export const Buttons = styled.div`
   width: 90%;
 
   @media screen and (min-width: 1024px) {
-    width: 20%;
+    width: unset;
   }
 `;
 
@@ -105,7 +105,7 @@ export const OrderByButton = styled.button`
   @media screen and (min-width: 1024px) {
     width: unset;
     border: 1px solid var(--darker-grey);
-    padding: 0.5em 1.2em;
+    padding: 0.2em 1.4em;
   }
 `;
 

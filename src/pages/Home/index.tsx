@@ -30,6 +30,7 @@ import Filters from "../../components/Filters";
 import { PriceFormatter } from "../../components/PriceFormatter";
 import api from "../../services/api";
 import { DataProps } from "../../libs/storage";
+import OrderBy from "../../components/OrderBy";
 
 export default function Home() {
   const storedFilter = localStorage.getItem("PrevFilter");
@@ -79,7 +80,7 @@ export default function Home() {
             <FilterButton type="button" onClick={handleClick}>
               Filtrar
             </FilterButton>
-            <OrderByButton>Ordenar</OrderByButton>
+            <OrderBy />
           </Buttons>
         </CatalogHeader>
         <CatalogContainer>
