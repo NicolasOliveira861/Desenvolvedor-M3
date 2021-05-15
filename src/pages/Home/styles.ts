@@ -41,7 +41,7 @@ export const CatalogHeader = styled.div`
   padding: 2em 0;
   width: 90%;
 
-  @media screen and (min-width: 481px) and (max-width: 768px) {
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
     flex-direction: column;
   }
   @media screen and (max-width: 480px) {
@@ -88,24 +88,6 @@ export const FilterButton = styled.button`
 
   @media screen and (min-width: 1024px) {
     display: none;
-  }
-`;
-
-export const OrderByButton = styled.button`
-  border: 1px solid var(--darker-grey);
-  background: none;
-  display: flex;
-  width: 100%;
-  padding: 0.8em 0;
-  justify-content: center;
-  color: var(--darker-grey);
-  border-left: none;
-  font-size: 1.1em;
-
-  @media screen and (min-width: 1024px) {
-    width: unset;
-    border: 1px solid var(--darker-grey);
-    padding: 0.2em 1.4em;
   }
 `;
 
@@ -195,6 +177,10 @@ export const ItemTitle = styled.p`
     font-size: 70%;
   }
 
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    font-size: 2vw;
+  }
+
   @media screen and (max-width: 480px) {
     font-size: 3vw;
   }
@@ -203,12 +189,19 @@ export const ItemTitle = styled.p`
 export const ItemPrice = styled.p`
   font-weight: bold;
   margin-bottom: 0.3em;
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    font-size: 2.4vw;
+  }
+
   @media screen and (max-width: 480px) {
     font-size: 4vw;
   }
 `;
 
 export const ItemInstallment = styled.p`
+  text-align: center;
+
   @media screen and (max-width: 480px) {
     font-size: 4vw;
   }

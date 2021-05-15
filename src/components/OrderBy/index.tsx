@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { GoX } from "react-icons/go";
 
@@ -24,7 +24,7 @@ const OrderBy: React.FC<OrderProps> = ({ handler }) => {
       <Summary id="summary">
         <Option
           id="default"
-          title={`${window.outerWidth < 900 ? "Ordenar" : "Ordenar por:"}`}
+          title={`${window.outerWidth < 1024 ? "Ordenar" : "Ordenar por:"}`}
           checked
         />
         <ArrowLabel htmlFor="summary">
@@ -49,7 +49,7 @@ const OrderBy: React.FC<OrderProps> = ({ handler }) => {
         <Item
           onClick={() => {
             handler("desc", "id");
-            if (window.outerWidth < 900) window.location.reload();
+            if (window.outerWidth < 1024) window.location.reload();
           }}
         >
           <Label htmlFor="item1">Mais Recentes</Label>
@@ -58,7 +58,7 @@ const OrderBy: React.FC<OrderProps> = ({ handler }) => {
         <Item
           onClick={() => {
             handler("asc", "price");
-            if (window.outerWidth < 900) window.location.reload();
+            if (window.outerWidth < 1024) window.location.reload();
           }}
         >
           <Label htmlFor="item2">Menor preço</Label>
@@ -67,7 +67,7 @@ const OrderBy: React.FC<OrderProps> = ({ handler }) => {
         <Item
           onClick={() => {
             handler("desc", "price");
-            if (window.outerWidth < 900) window.location.reload();
+            if (window.outerWidth < 1024) window.location.reload();
           }}
         >
           <Label htmlFor="item3">Maior preço</Label>

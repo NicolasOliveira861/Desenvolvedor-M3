@@ -27,7 +27,7 @@ export const Container = styled.details`
     border: 1px solid red;
   }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1024px) {
     flex-basis: 50%;
   }
 `;
@@ -51,7 +51,7 @@ export const Summary = styled.summary`
     outline: none;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 1024px) {
     font-size: 1.1em;
     border-left: none;
     height: 100%;
@@ -65,7 +65,7 @@ export const ArrowLabel = styled.label`
     right: 8%;
     top: 30%;
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1024px) {
       display: none;
     }
   }
@@ -201,5 +201,5 @@ export const Label = styled.label`
   display: block;
   cursor: pointer;
   font-size: ${window.outerWidth < 900 ? "1.2em" : "0.8em"};
-  text-align: ${window.outerWidth < 900 ? "center" : "left"};
+  text-align: ${window.outerWidth < 900 ? "left" : "center"};
 `;

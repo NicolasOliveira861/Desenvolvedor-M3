@@ -43,8 +43,9 @@ export const FiltersContainer = styled.div`
   width: 100%;
   position: relative;
 
-  @media screen and (min-width: 481px) and (max-width: 768px) {
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
     width: 80%;
+    height: 100vh;
   }
 
   @media screen and (max-width: 480px) {
@@ -54,6 +55,10 @@ export const FiltersContainer = styled.div`
 
 export const ColorsContainer = styled.div`
   margin-bottom: -15%;
+
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+    margin-bottom: -7%;
+  }
 `;
 
 export const ColorItemsContainer = styled.div<MobileFilter>`
@@ -71,7 +76,7 @@ export const ColorItemsContainer = styled.div<MobileFilter>`
       `}
   }
 
-  @media screen and (min-width: 481px) and (max-width: 768px) {
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
     margin-left: 2em;
   }
 
@@ -178,7 +183,7 @@ export const TitleBtn = styled.button`
     transform: scale(1.7);
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1025px) {
     display: none;
   }
 `;
@@ -186,6 +191,10 @@ export const TitleBtn = styled.button`
 export const SizeContainer = styled.div`
   margin-top: 3em;
   margin-bottom: -15%;
+
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+    margin-bottom: -7%;
+  }
 `;
 
 export const ItemsContainer = styled.div<MobileFilter>`
@@ -204,11 +213,11 @@ export const ItemsContainer = styled.div<MobileFilter>`
       `}
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1025px) {
     padding: 0 0 0 2em;
   }
 
-  @media screen and (min-width: 481px) and (max-width: 768px) {
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
     margin-left: 2em;
   }
 
@@ -238,7 +247,7 @@ export const PriceItemContainer = styled.div<MobileFilter>`
       `}
   }
 
-  @media screen and (min-width: 481px) and (max-width: 768px) {
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
     margin-left: 2em;
   }
   @media screen and (max-width: 480px) {

@@ -5,8 +5,6 @@ import React, {
   useImperativeHandle,
 } from "react";
 import { GoPlus, GoDash, GoX } from "react-icons/go";
-import { BsDash } from "react-icons/bs";
-import { GrFormClose } from "react-icons/gr";
 import Checkbox from "../Checkbox";
 import SizeCheckbox from "../SizeCheckbox";
 import PricesCheckbox from "../PricesCheckbox";
@@ -114,7 +112,6 @@ const Filters = forwardRef((props, ref) => {
             <TitleBtn
               onClick={() => {
                 setToggleSizes(!toggleSizes);
-                console.log(toggleSizes);
               }}
             >
               {toggleSizes ? (

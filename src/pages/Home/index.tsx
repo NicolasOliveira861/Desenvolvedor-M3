@@ -1,15 +1,9 @@
-import React, {
-  useState,
-  useEffect,
-  useImperativeHandle,
-  useRef,
-  ReactComponentElement,
-} from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useState, useEffect, useRef } from "react";
 import {
   Container,
   CatalogHeader,
   Content,
-  OrderByButton,
   Title,
   CatalogContainer,
   Catalog,
@@ -46,13 +40,6 @@ export default function Home(this: any) {
   function handleOrder(orderValue: string, sortValue: string) {
     setOrder(orderValue);
     setSort(sortValue);
-  }
-
-  function handleFilterColor(color: string) {
-    if (color === null) return setAllData(allData);
-
-    const filtered = allData.filter((data) => data.color.includes(color));
-    setAllData(filtered);
   }
 
   const ref = useRef<any>(null);
