@@ -201,5 +201,5 @@ export const Label = styled.label`
   display: block;
   cursor: pointer;
   font-size: ${window.outerWidth < 900 ? "1.2em" : "0.8em"};
-  text-align: ${window.outerWidth < 900 ? "left" : "center"};
+  text-align: left;
 `;
