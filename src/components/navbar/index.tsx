@@ -3,15 +3,18 @@ import { GiShoppingBag } from "react-icons/gi";
 import { Container, Logo, Icon, Badge } from "./styles";
 
 import logo from "../../assets/logo-m3.png";
+import { NavbarProps } from "../../libs/storage";
 
-export default function Navbar() {
+const Navbar: React.FC<NavbarProps> = ({ cartNumber }) => {
   return (
     <Container>
       <Logo src={logo} />
       <Icon href="/">
         <GiShoppingBag className="shoppingBag" />
-        <Badge>3</Badge>
+        <Badge>{cartNumber}</Badge>
       </Icon>
     </Container>
   );
-}
+};
+
+export default Navbar;

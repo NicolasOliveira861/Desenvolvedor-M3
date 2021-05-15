@@ -32,31 +32,48 @@ import api from "../../services/api";
 import { DataProps } from "../../libs/storage";
 import OrderBy from "../../components/OrderBy";
 
-export default function Home() {
-  const storedFilter = localStorage.getItem("PrevFilter");
+export default function Home(this: any) {
+  const storedOrder = localStorage.getItem("PreviousOrder");
+  const storedSort = localStorage.getItem("PreviousSort");
 
   const [allData, setAllData] = useState<DataProps[]>([]);
   const [page, setPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
-  const [filteredData, setFilteredData] = useState(
-    storedFilter !== null ? JSON.parse(storedFilter) : allData
-  );
+  const [order, setOrder] = useState<string>(storedOrder ? storedOrder : "");
+  const [sort, setSort] = useState<string>(storedSort ? storedSort : "id");
+  const [cartNumber, setCartNumber] = useState(0);
+
+  function handleOrder(orderValue: string, sortValue: string) {
+    setOrder(orderValue);
+    setSort(sortValue);
+  }
+
+  function handleFilterColor(color: string) {
+    if (color === null) return setAllData(allData);
+
+    const filtered = allData.filter((data) => data.color.includes(color));
+    setAllData(filtered);
+  }
 
   const ref = useRef<any>(null);
 
   const handleClick = () => {
     ref.current?.showFilters();
   };
+  const itemsLimit = window.outerWidth < 900 ? 6 : 9;
+
+  const limit = allData.length / itemsLimit;
 
   function handleFetchMore() {
-    setPage(page + 1);
-    fetchData();
+    if (page <= limit) {
+      setPage(page + 1);
+      fetchData();
+    }
   }
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   async function fetchData() {
     const { data } = await api.get(
-      `blouses?_sort=id&_page=${page}&_limit=${window.outerWidth > 768 ? 9 : 6}`
+      `blouses?_sort=${sort}&_order=${order}&_page=${page}&_limit=${itemsLimit}`
     );
 
     if (page > 1) setAllData((oldValue) => [...oldValue, ...data]);
@@ -67,11 +84,14 @@ export default function Home() {
 
   useEffect(() => {
     fetchData();
-  }, [page]);
+
+    localStorage.setItem("PreviousOrder", order);
+    localStorage.setItem("PreviousSort", sort);
+  }, [page, order, sort, cartNumber]);
 
   return (
     <Container>
-      <Navbar />
+      <Navbar cartNumber={cartNumber} />
 
       <Content>
         <CatalogHeader>
@@ -80,7 +100,7 @@ export default function Home() {
             <FilterButton type="button" onClick={handleClick}>
               Filtrar
             </FilterButton>
-            <OrderBy />
+            <OrderBy handler={handleOrder} />
           </Buttons>
         </CatalogHeader>
         <CatalogContainer>
@@ -95,7 +115,14 @@ export default function Home() {
                   <ItemTitle>{data.name}</ItemTitle>
                   <ItemPrice>{PriceFormatter(data.price)}</ItemPrice>
                   <ItemInstallment>{data.installments}</ItemInstallment>
-                  <BuyButton type="button"> Comprar </BuyButton>
+                  <BuyButton
+                    type="button"
+                    onClick={() => {
+                      setCartNumber(cartNumber + 1);
+                    }}
+                  >
+                    Comprar
+                  </BuyButton>
                 </CatalogItem>
               ))}
             </Catalog>

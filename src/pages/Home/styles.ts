@@ -80,7 +80,7 @@ export const FilterButton = styled.button`
   background: none;
   border: 1px solid var(--darker-grey);
   display: flex;
-  width: 100%;
+  flex-basis: 50%;
   padding: 0.8em 0;
   justify-content: center;
   color: var(--darker-grey);
@@ -149,6 +149,10 @@ export const FetchMoreBtn = styled.button`
   font-weight: 600;
   cursor: pointer;
   margin: 2em 0;
+
+  :hover {
+    background: #6ae1ff;
+  }
 
   @media screen and (max-width: 480px) {
     padding: 16px 22px;
@@ -221,6 +225,14 @@ export const BuyButton = styled.button`
   text-transform: uppercase;
   margin-top: 1em;
   cursor: pointer;
+  transition: 0.15s;
+  -o-transition: 0.15s;
+  -moz-transition: 0.15s;
+  -webkit-transition: 0.15s;
+
+  :hover {
+    background: var(--light-black);
+  }
 
   @media screen and (min-width: 1024px) {
     padding: 12px 0;

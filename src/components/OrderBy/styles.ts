@@ -1,11 +1,17 @@
 import styled from "styled-components";
 
+interface OpenProps {
+  isOpen?: boolean;
+}
+
 export const Container = styled.details`
   position: relative;
-  margin-right: 1em;
   z-index: 20;
+  @media screen and (max-width: 900px) {
+    position: unset;
+  }
 
-  /* [open] {
+  [open] {
     z-index: 1;
   }
 
@@ -18,7 +24,12 @@ export const Container = styled.details`
     position: fixed;
     top: 0;
     left: 0;
-  } */
+    border: 1px solid red;
+  }
+
+  @media screen and (max-width: 900px) {
+    flex-basis: 50%;
+  }
 `;
 
 export const Summary = styled.summary`
@@ -39,6 +50,13 @@ export const Summary = styled.summary`
   :focus {
     outline: none;
   }
+
+  @media screen and (max-width: 480px) {
+    font-size: 1.1em;
+    border-left: none;
+    height: 100%;
+    padding: 0;
+  }
 `;
 
 export const ArrowLabel = styled.label`
@@ -46,6 +64,53 @@ export const ArrowLabel = styled.label`
     position: absolute;
     right: 8%;
     top: 30%;
+
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+  }
+`;
+
+export const ListHeader = styled.div`
+  border-bottom: 1px solid var(--grey);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1em 1em;
+
+  @media screen and (min-width: 901px) {
+    display: none;
+  }
+`;
+
+export const Title = styled.div`
+  display: none;
+
+  @media screen and (max-width: 900px) {
+    font-size: 1.3em;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--darker-grey);
+    font-weight: 600;
+  }
+`;
+
+export const CloseButton = styled.button`
+  display: flex;
+  background: none;
+  border: none;
+  align-items: center;
+
+  .icon {
+    vertical-align: middle;
+    transform: scale(1.6, 1.6);
+  }
+
+  @media screen and (min-width: 901px) {
+    display: none;
   }
 `;
 
@@ -66,9 +131,14 @@ export const Option = styled.input.attrs({
     display: inline;
     font-size: 1em;
   }
+
+  @media screen and (max-width: 900px) {
+    font-size: 1.1em;
+    color: var(--darker-grey);
+  }
 `;
 
-export const List = styled.ul`
+export const List = styled.ul<OpenProps>`
   width: 100%;
   background: var(--white);
   position: absolute;
@@ -80,6 +150,16 @@ export const List = styled.ul`
   overflow-y: auto;
   counter-reset: labels;
   list-style-type: none;
+
+  @media screen and (max-width: 900px) {
+    position: absolute;
+    min-height: 100%;
+    max-height: unset;
+    display: ${(props) => (props.isOpen ? "flex" : "none")};
+    flex-direction: column;
+    left: 0;
+    top: 0;
+  }
 `;
 
 export const Item = styled.li`
@@ -99,12 +179,27 @@ export const Item = styled.li`
     color: var(--white);
     border: none;
   }
+
+  @media screen and (max-width: 900px) {
+    border: none;
+    padding: 2em 2em 0em 2em;
+
+    :last-child {
+      border: none;
+    }
+
+    :hover {
+      background: none;
+      color: unset;
+      border: none;
+    }
+  }
 `;
 
 export const Label = styled.label`
   width: 100%;
   display: block;
   cursor: pointer;
-  font-size: 0.8em;
-  text-align: left;
+  font-size: ${window.outerWidth < 900 ? "1.2em" : "0.8em"};
+  text-align: ${window.outerWidth < 900 ? "center" : "left"};
 `;

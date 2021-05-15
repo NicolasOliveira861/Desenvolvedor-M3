@@ -23,3 +23,11 @@ export interface PricesProps {
   price1: number;
   price2: number;
 }
+
+export interface OrderProps {
+  handler: (orderValue: string, sortValue: string) => void;
+}
+
+export interface NavbarProps {
+  cartNumber: number;
+}
